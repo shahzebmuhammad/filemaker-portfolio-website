@@ -1,0 +1,300 @@
+/* Material Consumption Report Styles */
+/* Optimized for Excel Export from FileMaker */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.report-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Report Header */
+.report-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f0f0f0;
+    border: 1px solid #000;
+}
+
+.report-header h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.report-meta {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Main Table */
+.material-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9px;
+    table-layout: fixed;
+}
+
+/* Header Row */
+.header-row {
+    background: #4472C4;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    height: 40px;
+}
+
+.header-row th {
+    border: 1px solid #2E5C9A;
+    padding: 5px 3px;
+    vertical-align: middle;
+    font-size: 9px;
+    line-height: 1.2;
+}
+
+/* Column Widths */
+.col-material { width: 80px; }
+.col-description { width: 350px; }
+.col-unit { width: 40px; }
+.col-opening { width: 70px; }
+.col-receipt { width: 70px; }
+.col-consumed { width: 70px; }
+.col-returned { width: 70px; }
+.col-stores { width: 70px; }
+.col-stock { width: 70px; }
+.col-prod { width: 60px; }
+.col-recovery { width: 60px; }
+.col-std { width: 70px; }
+.col-theo { width: 70px; }
+.col-actual { width: 70px; }
+.col-diff { width: 70px; }
+.col-loss { width: 70px; }
+
+/* Category Header Rows */
+.category-row {
+    background: #5B9BD5;
+    font-weight: bold;
+    height: 25px;
+}
+
+.category-header {
+    color: white;
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 11px;
+    border: 1px solid #4472C4;
+}
+
+/* Data Rows */
+.data-row {
+    background: white;
+    height: 22px;
+}
+
+.data-row:hover {
+    background: #F2F2F2;
+}
+
+.data-row td {
+    border: 1px solid #D0D0D0;
+    padding: 3px 5px;
+    vertical-align: middle;
+}
+
+/* Highlighted Rows (alternating colors) */
+.highlight-row {
+    background: #E7F3FF;
+}
+
+.highlight-row:hover {
+    background: #D0E8FF;
+}
+
+/* Column Alignments */
+.col-material,
+.col-unit {
+    text-align: center;
+    font-weight: 600;
+}
+
+.col-description {
+    text-align: left;
+    padding-left: 8px;
+    font-size: 8.5px;
+}
+
+.col-number {
+    text-align: right;
+    padding-right: 8px;
+    font-family: 'Courier New', monospace;
+}
+
+.col-percent {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Negative Numbers in Red */
+.col-number.negative,
+.col-percent.negative {
+    color: #C00000;
+}
+
+/* Positive Differences in Green */
+.col-number.positive {
+    color: #00B050;
+}
+
+/* Zero Values */
+.col-number.zero {
+    color: #7F7F7F;
+}
+
+/* Report Footer */
+.report-footer {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #4472C4;
+    font-size: 9px;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        padding: 0;
+    }
+    
+    .report-container {
+        width: 100%;
+    }
+    
+    .material-table {
+        page-break-inside: auto;
+    }
+    
+    .data-row {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    
+    .category-row {
+        page-break-after: avoid;
+    }
+    
+    .header-row {
+        display: table-header-group;
+    }
+}
+
+/* Excel Export Optimization */
+@media screen and (max-width: 1400px) {
+    .material-table {
+        font-size: 8px;
+    }
+    
+    .col-description {
+        font-size: 7.5px;
+    }
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 1024px) {
+    .report-container {
+        overflow-x: scroll;
+    }
+    
+    .material-table {
+        min-width: 1800px;
+    }
+}
+
+/* Special Formatting Classes */
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Status Indicators */
+.status-ok {
+    background: #C6EFCE;
+    color: #006100;
+}
+
+.status-warning {
+    background: #FFEB9C;
+    color: #9C6500;
+}
+
+.status-error {
+    background: #FFC7CE;
+    color: #9C0006;
+}
+
+/* Summary Row (if needed) */
+.summary-row {
+    background: #D9E1F2;
+    font-weight: bold;
+    border-top: 2px solid #4472C4;
+    border-bottom: 2px solid #4472C4;
+}
+
+.summary-row td {
+    padding: 8px 5px;
+    font-size: 10px;
+}
+
+/* Empty Cell Styling */
+td:empty::after {
+    content: '-';
+    color: #999;
+}
+
+/* Freeze Header for Scrolling */
+.material-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* FileMaker Specific Classes */
+.fm-field {
+    /* Style for FileMaker merge fields */
+    background: #FFFACD;
+    border: 1px dashed #FFD700;
+}
+
+.fm-calculation {
+    /* Style for calculated fields */
+    background: #E6F3FF;
+}
+
+.fm-summary {
+    /* Style for summary fields */
+    background: #FFE6F0;
+    font-weight: bold;
+}
