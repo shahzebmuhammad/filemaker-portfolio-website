@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Consumption Report</title>
+    <link rel="stylesheet" href="material-report-styles.css">
+</head>
+<body>
+    <div class="report-container">
+        <!-- Report Header -->
+        <div class="report-header">
+            <h1>MATERIAL CONSUMPTION REPORT</h1>
+            <div class="report-meta">
+                <span>Date: [DATE]</span>
+                <span>Period: [PERIOD]</span>
+            </div>
+        </div>
+
+        <!-- Main Report Table -->
+        <table class="material-table">
+            <thead>
+                <tr class="header-row">
+                    <th class="col-material">MATERIAL</th>
+                    <th class="col-description">DESCRIPTION</th>
+                    <th class="col-unit">UNIT</th>
+                    <th class="col-opening">OPENING<br>RIP+TOB</th>
+                    <th class="col-receipt">RECEIPT</th>
+                    <th class="col-consumed">CONSUMED<br>QTY</th>
+                    <th class="col-returned">RETURNED<br>QTY</th>
+                    <th class="col-stores">STORES<br>REJECTED</th>
+                    <th class="col-stock">STOCK</th>
+                    <th class="col-prod">PROD<br>stock</th>
+                    <th class="col-recovery">Recovery</th>
+                    <th class="col-std">TOBACCO STD<br>at 100%</th>
+                    <th class="col-theo">THEO. CONS<br>100%</th>
+                    <th class="col-actual">ACTUAL<br>CONSU</th>
+                    <th class="col-diff">DIFF OF<br>LOSS</th>
+                    <th class="col-loss">% LOSS<br>(WITHOUT<br>WASTAGE)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TOBACCO SECTION -->
+                <tr class="category-row">
+                    <td colspan="16" class="category-header">TOBACCO</td>
+                </tr>
+                
+                <!-- Sample Data Row - Replace with FileMaker fields -->
+                <tr class="data-row">
+                    <td class="col-material">TOB1118</td>
+                    <td class="col-description">TOBACCO DEDL497A (80KGS/BOX) - ITG (WEST RED, WEST BLUE, WEST SILVER)</td>
+                    <td class="col-unit">KGS</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-percent">-</td>
+                </tr>
+
+                <tr class="data-row highlight-row">
+                    <td class="col-material">TOB1185</td>
+                    <td class="col-description">TOBACCO TOB/03TRTY497A01/06294017911150/ITG/KS</td>
+                    <td class="col-unit">KGS</td>
+                    <td class="col-number">36,026.90</td>
+                    <td class="col-number">252,021.00</td>
+                    <td class="col-number">157,708.00</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">130,302.50</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">37.40</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-percent">-</td>
+                </tr>
+
+                <!-- CIGARETTE PAPER SECTION -->
+                <tr class="category-row">
+                    <td colspan="16" class="category-header">CIGARETTE PAPER</td>
+                </tr>
+
+                <tr class="data-row">
+                    <td class="col-material">CGP1042</td>
+                    <td class="col-description">CIGARETTE PAPER CGP_NO SLIT_60 CU//53MM/25GSM_6000M___OP PAPIRNA_KS RC SEAL PACK</td>
+                    <td class="col-unit">BB</td>
+                    <td class="col-number">3,278.30</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">250.70</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">3,027.60</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">0.04750</td>
+                    <td class="col-number">247.95</td>
+                    <td class="col-number">250.70</td>
+                    <td class="col-number">2.75</td>
+                    <td class="col-percent">1.10%</td>
+                </tr>
+
+                <tr class="data-row">
+                    <td class="col-material">CGP1043</td>
+                    <td class="col-description">CIGARETTE PAPER CGP/NO/6 CU/5000 L/53 W/35 GSM/01CP01548/011/WATTENS/KSRC SEAL</td>
+                    <td class="col-unit">BB</td>
+                    <td class="col-number">2,289.70</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">734.90</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">1,512.00</td>
+                    <td class="col-number">42.80</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">0.05820</td>
+                    <td class="col-number">732.45</td>
+                    <td class="col-number">734.90</td>
+                    <td class="col-number">2.45</td>
+                    <td class="col-percent">0.33%</td>
+                </tr>
+
+                <!-- TIPPING PAPER SECTION -->
+                <tr class="category-row">
+                    <td colspan="16" class="category-header">TIPPING PAPER</td>
+                </tr>
+
+                <tr class="data-row">
+                    <td class="col-material">PCT1434</td>
+                    <td class="col-description">TIPPING PAPER WEST WHITE</td>
+                    <td class="col-unit">BB</td>
+                    <td class="col-number">1,212.20</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">330.50</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">881.70</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">329.25</td>
+                    <td class="col-number">0.04090</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">330.50</td>
+                    <td class="col-number">1.26</td>
+                    <td class="col-percent">0.38%</td>
+                </tr>
+
+                <tr class="data-row highlight-row">
+                    <td class="col-material">PCT1507</td>
+                    <td class="col-description">TIPPING PAPER WEST RED</td>
+                    <td class="col-unit">BB</td>
+                    <td class="col-number">1,402.90</td>
+                    <td class="col-number">597.00</td>
+                    <td class="col-number">257.10</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">1,742.80</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">0.04090</td>
+                    <td class="col-number">253.17</td>
+                    <td class="col-number">257.10</td>
+                    <td class="col-number">3.93</td>
+                    <td class="col-percent">1.53%</td>
+                </tr>
+
+                <!-- FILTER SECTION -->
+                <tr class="category-row">
+                    <td colspan="16" class="category-header">FILTER</td>
+                </tr>
+
+                <tr class="data-row">
+                    <td class="col-material">FLT1128</td>
+                    <td class="col-description">FILTER 108mm X 7.72mm X 550 PD, Dual Acetate Filter rods_ITG (FILTER FOR "WEST ONE WHITE" - 4500/TRAY)</td>
+                    <td class="col-unit">M</td>
+                    <td class="col-number">2.60</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">2.60</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">2.50000</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-percent">0.00%</td>
+                </tr>
+
+                <!-- INNER BOX SECTION -->
+                <tr class="category-row">
+                    <td colspan="16" class="category-header">INNER BOX / BLANK</td>
+                </tr>
+
+                <tr class="data-row">
+                    <td class="col-material">INB1016</td>
+                    <td class="col-description">INNER BOX INB WEST KSA KSRC SEAL</td>
+                    <td class="col-unit">M</td>
+                    <td class="col-number">46,550.20</td>
+                    <td class="col-number">14,184.00</td>
+                    <td class="col-number">11,219.50</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">49,121.50</td>
+                    <td class="col-number">175.50</td>
+                    <td class="col-number">217.70</td>
+                    <td class="col-number">0.50000</td>
+                    <td class="col-number">10,992.50</td>
+                    <td class="col-number">11,219.50</td>
+                    <td class="col-number">227.00</td>
+                    <td class="col-percent">2.02%</td>
+                </tr>
+
+                <!-- MASTER CASE SECTION -->
+                <tr class="category-row">
+                    <td colspan="16" class="category-header">MASTER CASE</td>
+                </tr>
+
+                <tr class="data-row">
+                    <td class="col-material">MCS1586</td>
+                    <td class="col-description">MASTER CASE WEST RED MASTER CASE</td>
+                    <td class="col-unit">M</td>
+                    <td class="col-number">4,666.00</td>
+                    <td class="col-number">5,900.00</td>
+                    <td class="col-number">6,194.00</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">4,372.00</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">-</td>
+                    <td class="col-number">1.00000</td>
+                    <td class="col-number">6,190.00</td>
+                    <td class="col-number">6,194.00</td>
+                    <td class="col-number">4.00</td>
+                    <td class="col-percent">0.06%</td>
+                </tr>
+
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+
+        <!-- Report Footer -->
+        <div class="report-footer">
+            <p>Generated: [TIMESTAMP]</p>
+            <p>Report by: [USER]</p>
+        </div>
+    </div>
+
+    <!-- FileMaker Field Mapping Guide -->
+    <div class="field-mapping" style="display: none;">
+        <!--
+        FILEMAKER FIELD MAPPING:
+        Replace the following placeholders with your FileMaker fields:
+        
+        [DATE] = Get(CurrentDate)
+        [PERIOD] = YourPeriodField
+        [TIMESTAMP] = Get(CurrentTimeStamp)
+        [USER] = Get(AccountName)
+        
+        Table Fields:
+        - Material Code: MaterialTable::MaterialCode
+        - Description: MaterialTable::Description
+        - Unit: MaterialTable::Unit
+        - Opening: MaterialTable::Opening
+        - Receipt: MaterialTable::Receipt
+        - Consumed Qty: MaterialTable::ConsumedQty
+        - Returned Qty: MaterialTable::ReturnedQty
+        - Stores Rejected: MaterialTable::StoresRejected
+        - Stock: MaterialTable::Stock
+        - Prod Stock: MaterialTable::ProdStock
+        - Recovery: MaterialTable::Recovery
+        - Tobacco STD: MaterialTable::TobaccoSTD
+        - Theo Cons: MaterialTable::TheoreticalConsumption
+        - Actual Consu: MaterialTable::ActualConsumption
+        - Diff of Loss: MaterialTable::DifferenceOfLoss
+        - % Loss: MaterialTable::PercentageLoss
+        
+        EXPORT TO EXCEL:
+        1. In FileMaker, go to File > Export Records
+        2. Choose Excel format (.xlsx)
+        3. Select this layout
+        4. Map fields accordingly
+        5. The CSS styling will be preserved in Excel
+        -->
+    </div>
+</body>
+</html>
